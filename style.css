@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
+  color: #333;
+}
+header {
+  background-color: #00695c;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.hero {
+  padding: 40px;
+  text-align: center;
+  background-color: #e0f2f1;
+}
+footer {
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+.bottom-banner {
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+ background-color: #004D40;
+ color: white;
+ text-align: centre;
+ padding: 8px 0;
+ font-weight: bold;
+ z-index: 1000;
+}
+.hero {
+  height: 100vh; /* full screen height */
+  text-align: center;
+  background-image: url('xl8hSG3.jpg'); /* or local image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.place-card {
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  background-color: #fff;
+}
+
+.place-card:hover {
+  transform: scale(1.05);
+}
+
+.place-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.place-card p {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* Make all place cards equal size */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns for desktop */
+  gap: 20px;
+  padding: 20px;
+}
+
+.place-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Force images to be same height */
+.place-card img {
+  width: 100%;
+  height: 180px;          /* fixed equal height */
+  object-fit: cover;      /* crop nicely, no stretching */
+  border-radius: 12px 12px 0 0;
+}
+
+.place-card p {
+  font-weight: bold;
+  padding: 10px;
+}
+
+/* 📱 Mobile view: 2 columns */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
