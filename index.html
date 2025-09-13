@@ -26,12 +26,54 @@
     </section>
   </main>
 
-  
+  <!-- Festivals Call-to-Action -->
+<section id="festival-cta">
+  <h2>Wanna know more about Festivals in India?</h2>
+  <p>Discover the colorful and vibrant festivals celebrated across India!</p>
+  <a href="Festival.html" class="btn">Click Here</a>
+</section>
 
   <script src="script.js"></script>
   <div class="bottom-banner">
-   <footer>
-   <p> &copy; 2025 Explore India. All rights reserved.</p>
-   </footer>
+
+
+  <!-- Scroll Down Hint -->
+<div class="scroll-down">
+  &#x2193;
+</div>
+
+<style>
+.scroll-down {
+  position: fixed; /* stays on screen */
+  bottom: 20px; /* distance from bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0,0,0,0.5); /* semi-transparent */
+  padding: 8px 15px;
+  border-radius: 25px;
+  animation: bounce 1.5s infinite;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* bounce effect */
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+}
+</style>
+
+<script>
+window.addEventListener('scroll', function() {
+  document.querySelector('.scroll-down').style.display = 'none';
+});
+</script>
+
+
+
+
 </body>
 </html>
